@@ -11,7 +11,7 @@ import SidebarComponent from "./components/sideBar/SidebarComponents.js";
 const Layout = () => {
   return (
     <React.Fragment>
-      <div className="container text-center">
+      <div className="container">
         <div className="row">
           <div className="col-4">
             <SidebarComponent />

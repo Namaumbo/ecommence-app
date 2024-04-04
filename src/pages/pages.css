@@ -1,0 +1,45 @@
+.cart {
+    color: #dbb358;
+    font-weight: lighter;
+}
+
+#head {
+    font-weight: lighter;
+}
+
+.picked-item-container {
+    height: 12em;
+    /* border: 0.3px solid rgb(185, 185, 185); */
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-width: 30em;
+    margin-right: 10px;
+}
+
+.order-cart-container {
+    display: flex
+}
+
+.order-total {
+    width: 22em;
+}
+
+#total-heads {
+    font-weight: bolder;
+    color: #dbb358;
+}
+
+#amounts-numbers {
+    font-weight: bolder;
+}
+
+.order-total {
+    /* border: 0.3px solid rgb(185, 185, 185); */
+    border-radius: 5px;
+}
+
+.subtotal {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
