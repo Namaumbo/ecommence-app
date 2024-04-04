@@ -1,0 +1,12 @@
+.side-main {
+    border-right: 1px solid black;
+    width: fit-content;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid yellow;
+}
