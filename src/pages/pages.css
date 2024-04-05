@@ -8,7 +8,7 @@
 }
 
 .picked-item-container {
-    height: 12em;
+    height: 15em;
     /* border: 0.3px solid rgb(185, 185, 185); */
     border-radius: 5px;
     padding: 10px;
@@ -42,4 +42,14 @@
 
 .subtotal {
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.checkout-btn{
+    background-color: #dbb358;
+    padding: 1px;
+    width: 200px;
+    border: 1px solid #dbb358;
+    border-radius: 4px;
+    color: white;
+    font-weight: bolder;
+    margin-top: 10px;
 }

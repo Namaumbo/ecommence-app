@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Card, CardBody } from "@chakra-ui/react";
+import { Heading, Card, CardBody, Button } from "@chakra-ui/react";
 import HorizontalCardComponent from "../components/horizontalcardComponent/HorizontalCardComponent";
 import "./pages.css";
 export default function CartPage() {
@@ -23,15 +23,26 @@ export default function CartPage() {
           </Heading>
           <Card>
             <CardBody>
-            <Heading as="h4" size="md" id="subtotal">Total</Heading>
+              <Heading as="h4" size="md" id="subtotal">
+                Total
+              </Heading>
               <div className="row align-items-start">
-                <div className="col" id="total-heads" >Subtotal </div>
-                <div className="col" id="amounts-numbers">$ 2000 </div>
+                <div className="col" id="total-heads">
+                  Subtotal{" "}
+                </div>
+                <div className="col" id="amounts-numbers">
+                  $ 2000{" "}
+                </div>
               </div>
               <div className="row align-items-start">
-                <div className="col" id="total-heads" >Items No. </div>
-                <div className="col"  id="amounts-numbers">4</div>
+                <div className="col" id="total-heads">
+                  Items No.{" "}
+                </div>
+                <div className="col" id="amounts-numbers">
+                  4
+                </div>
               </div>
+              <button className="checkout-btn">CHECKOUT</button>
             </CardBody>
           </Card>
         </div>
