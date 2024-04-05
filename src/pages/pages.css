@@ -54,3 +54,33 @@
     font-weight: lighter;
     margin-top: 10px;
 }
+
+#landing-page {
+    padding: 15px;
+}
+
+#welcome-words {
+    margin-top: 100px;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 80px;
+}
+
+.A {
+    font-weight: bolder;
+}
+
+#info-words {
+    /* border: 1px solid yellow; */
+    margin-top: 80px;
+}
+
+#main-container {
+    margin-top: 3em;
+}
+
+:root {
+    --scrollbar-width: 15px;
+    --scrollbar-thumb-color: #929292;
+    --scrollbar-track-color: #ffffff;
+}

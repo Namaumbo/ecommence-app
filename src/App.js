@@ -7,10 +7,12 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import SidebarComponent from "./components/sideBar/SidebarComponents.js";
+import Header from "./components/header/Header.js";
 
 const Layout = () => {
   return (
     <React.Fragment>
+    <Header/>
       <div className="container">
         <div className="row">
           <div className="col-4">
@@ -29,7 +31,7 @@ const Layout = () => {
 function App() {
   const router = createBrowserRouter([
     {
-      element: <Layout />,
+      // element: <Layout />,
       children: [
         {
           path: "/",
