@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import './carousel.css'
+import "./carousel.css";
 
 function CarouselComponent() {
   const settings = {
@@ -21,13 +21,13 @@ function CarouselComponent() {
           <img src={`${process.env.PUBLIC_URL}/photo.avif`} alt="sample pic" />
         </div>
         <div className="carousel-img">
-          <img src={`${process.env.PUBLIC_URL}/photo.avif`} alt="sample pic" />
+          <img src={`${process.env.PUBLIC_URL}/clothes.JPG`} alt="sample pic" />
         </div>
         <div className="carousel-img">
           <img src={`${process.env.PUBLIC_URL}/photo.avif`} alt="sample pic" />
         </div>
         <div className="carousel-img">
-          <img src={`${process.env.PUBLIC_URL}/photo.avif`} alt="sample pic" />
+          <img src={`${process.env.PUBLIC_URL}/clothes.JPG`} alt="sample pic" />
         </div>
       </Slider>
     </div>
