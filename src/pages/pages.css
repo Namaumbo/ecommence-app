@@ -43,13 +43,14 @@
 .subtotal {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-.checkout-btn{
+
+.checkout-btn {
     background-color: #dbb358;
     padding: 1px;
     width: 200px;
     border: 1px solid #dbb358;
     border-radius: 4px;
     color: white;
-    font-weight: bolder;
+    font-weight: lighter;
     margin-top: 10px;
 }

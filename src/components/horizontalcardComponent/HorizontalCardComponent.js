@@ -16,9 +16,9 @@ export default function HorizontalCardComponent() {
             <div className="product-info">
               <div className="product-name">PRODUCT NAME</div>
               <div className="product-color">Color: Blue</div>
-              <div className="product-price">$2999 each</div>
+              <div className="product-price"><span className="mtengo">$2999</span>/each</div>
               <Button colorScheme="teal" size="xs">
-                Button
+                Remove
               </Button>
             </div>
           </div>

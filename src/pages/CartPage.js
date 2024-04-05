@@ -31,7 +31,7 @@ export default function CartPage() {
                   Subtotal{" "}
                 </div>
                 <div className="col" id="amounts-numbers">
-                  $ 2000{" "}
+                  <span className="mtengo">$14000</span>
                 </div>
               </div>
               <div className="row align-items-start">
