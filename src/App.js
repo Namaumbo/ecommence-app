@@ -7,7 +7,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import SidebarComponent from "./components/sideBar/SidebarComponents.js";
 import Header from "./components/header/Header.js";
-
+import ItemPage from "./pages/ItemPage.js";
 // Create a new context
 const MyContext = createContext();
 const Layout = () => {
@@ -45,6 +45,14 @@ function App() {
         {
           path: "/cart-page",
           element: <CartPage />,
+        },
+        {
+          path: `/product-list-page/:category`,
+          element: <CartPage />,
+        },
+        {
+          path: `/product-view/:item`,
+          element: <ItemPage />,
         },
       ],
     },

@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import CardComponent from "../components/cardComponent/CardComponent";
 import Header from "../components/header/Header";
 import Slider from "react-slick";
-import "./pages.css"
+import "./pages.css";
 
 export default function ProductListingPage() {
+  const navigation = useNavigate();
+
   var settings = {
     dots: true,
     infinite: false,
@@ -40,42 +43,59 @@ export default function ProductListingPage() {
     ],
   };
 
+  const handleClick = (category) => {
+    navigation(`/product-list-page/${category}`);
+  };
+
+  const handleItemClick = (item) => {
+    navigation(`/product-view/${item}`);
+  };
   const mapArry = [1, 2, 3, 4, 5, 6, 7];
   return (
     <React.Fragment>
       {/* TODO: Remove this Header */}
       <Header />
       <div className="title-link">
-      <h1>
-        Furniture <span className="cart">Section</span>
-      </h1>
-      <div>
-        <span className="link-see-more">See more...</span>
+        <h1>
+          Furniture <span className="cart">Section</span>
+        </h1>
+        {/* TODO: make this a reusable component */}
+        <div>
+          <span
+            className="link-see-more"
+            onClick={() => handleClick("furniture")}
+          >
+            See more...
+          </span>
+        </div>
       </div>
-      </div>
-      
+
       <div className="slider-container">
         <Slider {...settings}>
           {mapArry.map((_x) => {
             return (
-              <>
-                <div>
-                  <CardComponent />
-                </div>
-              </>
+              <div key={_x + 1} onClick={() => handleItemClick("item")}>
+                <CardComponent />
+              </div>
             );
           })}
         </Slider>
       </div>
-      <h1>
-        Clothes<span className="cart"> & Boots</span>
-      </h1>
+
+      <div className="title-link">
+        <h1>
+          Clothes<span className="cart"> & Boots</span>
+        </h1>
+        <span className="link-see-more" onClick={() => handleClick("clothes")}>
+          See more...
+        </span>
+      </div>
       <div className="slider-container">
         <Slider {...settings}>
           {mapArry.map((_x) => {
             return (
               <>
-                <div>
+                <div key={_x + 1} onClick={() => handleItemClick("item")}>
                   <CardComponent />
                 </div>
               </>
