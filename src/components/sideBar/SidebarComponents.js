@@ -13,12 +13,12 @@ export default function SidebarComponent() {
     },
     {
       name: "ProductList",
-      icon: <github.GoArchive />,
+      icon: <github.GoRows />,
       path: "/product-list-page",
     },
     {
       name: "Cart",
-      icon: <github.GoArchive />,
+      icon: <github.GoProjectSymlink />,
       path: "/cart-page",
     },
   ];
@@ -26,6 +26,9 @@ export default function SidebarComponent() {
     <React.Fragment>
       <div className="side-main">
         <OrderedList>
+        <div className="side-main-container ">
+
+       
           {links.map((menu) => {
             return (
               <NavLink to={menu.path} key={menu.path}>
@@ -36,6 +39,7 @@ export default function SidebarComponent() {
               </NavLink>
             );
           })}
+          </div>
         </OrderedList>
       </div>
 
