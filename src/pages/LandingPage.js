@@ -1,5 +1,6 @@
 import React from "react";
 import CarouselComponent from "../components/carousel/CarouselComponent";
+import Header from "../components/header/Header";
 import "./pages.css";
 import { Text } from "@chakra-ui/react";
 

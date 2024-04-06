@@ -32,8 +32,7 @@
 }
 
 #amounts-numbers {
-    font-weight: lighter;
-    font-size: 20px;
+    font-weight: bolder;
 }
 
 .order-total {
@@ -48,7 +47,7 @@
 .checkout-btn {
     background-color: #dbb358;
     padding: 1px;
-    width: 310px;
+    width: 200px;
     /* border: 1px solid #dbb358; */
     border-radius: 4px;
     color: white;
