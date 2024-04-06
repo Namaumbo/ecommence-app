@@ -21,7 +21,7 @@ export default function ProductListingPage() {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 5,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },
@@ -74,8 +74,8 @@ export default function ProductListingPage() {
         <Slider {...settings}>
           {mapArry.map((_x) => {
             return (
-              <div key={_x + 1} onClick={() => handleItemClick("item")}>
-                <CardComponent />
+              <div key={_x + 1} onClick={() => handleItemClick("item")} className="single-item">
+                <CardComponent  />
               </div>
             );
           })}

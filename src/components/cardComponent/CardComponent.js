@@ -16,8 +16,9 @@ import Header from "../header/Header";
 
 export default function CardComponent() {
   return (
-    <React.Fragment>
-      <Card maxW="sm">
+    <React.Fragment >
+
+      <Card maxW="sm" className="a-card">
         <CardBody>
           <Image
             src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"

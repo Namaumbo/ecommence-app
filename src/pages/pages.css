@@ -103,3 +103,10 @@
     justify-content: space-around;
 
 }
+
+.single-item{
+}
+.single-item:hover{
+    /* box-shadow: 5px 5px 5px ; */
+   
+}

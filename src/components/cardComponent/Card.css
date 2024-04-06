@@ -1,23 +1,40 @@
-.cards{
+.cards {
     border: 1px solid red;
     height: 100px;
 }
-.name{
+
+.name {
     /* color: #dbb358; */
     font-size: 16px;
     font-weight: bold;
     /* font-family: roboto; */
 }
-.info-card{
+
+.info-card {
     max-width: fit-content;
     margin: auto;
 }
-.add-btn{
+
+.add-btn {
     margin-right: 10px;
 }
-.price-number{
+
+.price-number {
     font-weight: lighter;
 }
-.futa{
+
+.futa {
     margin: auto;
+}
+
+.a-card {
+    margin-right: 20px;
+    cursor: pointer;
+
+
+}
+
+.a-card:hover {
+    border: 1px solid #dbb358;
+    border-radius: 5px;
 }
