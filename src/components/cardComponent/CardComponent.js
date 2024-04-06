@@ -1,44 +1,70 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import "./Card.css";
+
 import {
-  Stack,
   CardBody,
-  Heading,
   Text,
-  Divider,
   Card,
   Image,
-  ButtonGroup,
   Button,
   CardFooter,
+  useToast,
 } from "@chakra-ui/react";
 
-export default function CardComponent() {
+export default function CardComponent({ product }) {
+  const { addToCart } = useContext(CartContext);
+  const toast = useToast();
+  const navigation = useNavigate();
+
+  const handleAddToCart = ({ product }) => {
+    addToCart(product, (addedProduct) => {
+      toast({
+        title: "Cart Updated",
+        description: `${product.name} has been added to cart`,
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+    });
+  };
+
+  const handleItemClick = (item) => {
+    navigation(`/product-view/${item}`);
+  };
+
   return (
     <React.Fragment>
-      <Card maxW="sm">
+      <Card maxW="sm" className="a-card">
         <CardBody>
           <Image
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            src={product.picture}
             alt="Green double couch with wooden legs"
             borderRadius="lg"
           />
-          <Stack mt="6" spacing="3">
-            <Heading size="md">Living room Sofa</Heading>
-            <Text color="blue.600" fontSize="2xl">
-              $450
-            </Text>
-          </Stack>
         </CardBody>
-        <Divider />
-        <CardFooter>
-          <ButtonGroup spacing="2">
-            <Button variant="solid" colorScheme="blue">
-              Buy now
-            </Button>
-            <Button variant="ghost" colorScheme="blue">
-              Add to cart
-            </Button>
-          </ButtonGroup>
+        <div className="info-card">
+          <Text className="name">{product.name}</Text>
+          <h3 className="price-number">${product.price}</h3>
+        </div>
+        <CardFooter className="futa">
+          <Button
+            colorScheme="teal"
+            size="sm"
+            className="add-btn"
+            onClick={() => handleAddToCart({ product })}
+          >
+            To Cart
+          </Button>
+
+          <Button
+            colorScheme="blue"
+            size="sm"
+            onClick={() => handleItemClick("item")}
+          >
+            View It
+          </Button>
         </CardFooter>
       </Card>
     </React.Fragment>
