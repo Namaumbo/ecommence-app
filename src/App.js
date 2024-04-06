@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import ProductListingPage from "./pages/ProductListingPage";
@@ -9,7 +9,7 @@ import SidebarComponent from "./components/sideBar/SidebarComponents.js";
 import Header from "./components/header/Header.js";
 import ItemPage from "./pages/ItemPage.js";
 import Category from "./pages/Category.js";
-const MyContext = createContext();
+import { CartProvider } from "./context/CartContext.js";
 
 const Layout = () => {
   return (
@@ -57,12 +57,11 @@ function App() {
     },
   ]);
   return (
-    // TODO: Follow up on the context api
-    <MyContext.Provider>
+    <CartProvider>
       <ChakraProvider>
         <RouterProvider router={router} />
       </ChakraProvider>
-    </MyContext.Provider>
+    </CartProvider>
   );
 }
 

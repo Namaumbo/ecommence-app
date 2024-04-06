@@ -1,15 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import CardComponent from "../components/cardComponent/CardComponent";
-import Header from "../components/header/Header";
 import Slider from "react-slick";
 import "./pages.css";
 import * as github from "react-icons/go";
 import { Button } from "@chakra-ui/react";
+import dummy from "../dummy,.json"
 
-export default function ProductListingPage() {
+export default function ProductListingPage({product}) {
   const navigation = useNavigate();
 
+  // TODO: fetch from db using useEffect
   const CustomNextArrow = (props) => (
     <div
       style={{
@@ -66,10 +67,7 @@ export default function ProductListingPage() {
     navigation(`/product-list-page/${category}`);
   };
 
-  const handleItemClick = (item) => {
-    navigation(`/product-view/${item}`);
-  };
-  const mapArry = [1, 2, 3, 4, 5, 6, 7];
+ 
   return (
     <React.Fragment>
       <div className="main-product-listing">
@@ -90,14 +88,13 @@ export default function ProductListingPage() {
 
         <div className="slider-container">
           <Slider {...settings}>
-            {mapArry.map((_x) => {
+            {dummy.map((_x) => {
               return (
                 <div
                   key={_x + 1}
-                  onClick={() => handleItemClick("item")}
                   className="single-item"
                 >
-                  <CardComponent />
+                  <CardComponent product={_x} key={_x.name} />
                 </div>
               );
             })}
