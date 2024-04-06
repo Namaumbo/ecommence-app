@@ -4,17 +4,39 @@ import CardComponent from "../components/cardComponent/CardComponent";
 import Header from "../components/header/Header";
 import Slider from "react-slick";
 import "./pages.css";
+import * as github from "react-icons/go";
+import { Button } from "@chakra-ui/react";
 
 export default function ProductListingPage() {
   const navigation = useNavigate();
 
+  const CustomNextArrow = (props) => (
+    <div
+      style={
+        {
+          position:"relative",
+          left: "20px",
+          width: "40px",
+          marginBottom:"10px"
+      
+        }
+      }
+      onClick={props.onClick}
+    >
+      <Button colorScheme="blue" size="sm">
+        <github.GoArrowRight />
+      </Button>
+    </div>
+  );
+
   var settings = {
-    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,
+    prevArrow: <CustomNextArrow />,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -43,13 +65,6 @@ export default function ProductListingPage() {
     ],
   };
 
-  // var settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  // };
   const handleClick = (category) => {
     navigation(`/product-list-page/${category}`);
   };

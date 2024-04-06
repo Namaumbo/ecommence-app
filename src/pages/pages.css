@@ -48,7 +48,7 @@
     background-color: #dbb358;
     padding: 1px;
     width: 200px;
-    border: 1px solid #dbb358;
+    /* border: 1px solid #dbb358; */
     border-radius: 4px;
     color: white;
     font-weight: lighter;
@@ -100,7 +100,7 @@
 }
 
 .main-product-listing {
-    border: 1px solid red;
+    /* border: 1px solid red/; */
     width: 180.5%;
 }
 
