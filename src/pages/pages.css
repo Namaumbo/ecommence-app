@@ -72,21 +72,17 @@
 
 #info-words {
     /* border: 1px solid yellow; */
-    margin-top: 80px;
+    /* margin-top: 80px; */
 }
 
 #main-container {
-    margin-top: 3em;
+    /* margin-top: 3em; */
 }
 
-:root {
-    --scrollbar-width: 15px;
-    --scrollbar-thumb-color: #929292;
-    --scrollbar-track-color: #ffffff;
-}
+
 
 .slider-container {
-    width: 85%;
+    /* border: 1px solid black; */
 }
 
 .link-see-more {
@@ -99,14 +95,24 @@
 .title-link {
     display: flex;
     align-items: center;
-    /* TODO: Change here */
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
-.single-item{
+.main-product-listing {
+    border: 1px solid red;
+    width: 180.5%;
 }
-.single-item:hover{
+
+.single-item {}
+
+.single-item:hover {
     /* box-shadow: 5px 5px 5px ; */
-   
+
+}
+
+/* Increase the width of the slider */
+.slick-list {
+    width: 165%;
+    /* Set your desired width */
 }

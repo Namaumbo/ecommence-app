@@ -7,8 +7,6 @@ import { Text } from "@chakra-ui/react";
 export default function LandingPage() {
   return (
     <React.Fragment>
-      {/* TODO: remember to remove this  */}
-      <Header />
       <div className="container" id="main-container">
         <div className="row align-items-start">
           <div className="col" id="info-words">

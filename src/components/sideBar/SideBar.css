@@ -1,6 +1,8 @@
 .side-main {
     border-right: 1px solid black;
     width: fit-content;
+    height: 100vh;
+    
 }
 
 .items {

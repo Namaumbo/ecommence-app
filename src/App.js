@@ -8,20 +8,19 @@ import { ChakraProvider } from "@chakra-ui/react";
 import SidebarComponent from "./components/sideBar/SidebarComponents.js";
 import Header from "./components/header/Header.js";
 import ItemPage from "./pages/ItemPage.js";
-// Create a new context
+import Category from "./pages/Category.js";
 const MyContext = createContext();
+
 const Layout = () => {
   return (
     <React.Fragment>
       <Header />
-      <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <SidebarComponent />
-          </div>
-          <div className="col-8">
-            <Outlet />
-          </div>
+      <div className="holder-main">
+        <div>
+          <SidebarComponent />
+        </div>
+        <div>
+          <Outlet />
         </div>
       </div>
       {/* <div className="footer"><Footer /></div> */}
@@ -32,7 +31,7 @@ const Layout = () => {
 function App() {
   const router = createBrowserRouter([
     {
-      // element: <Layout />,
+      element: <Layout />,
       children: [
         {
           path: "/",
@@ -48,7 +47,7 @@ function App() {
         },
         {
           path: `/product-list-page/:category`,
-          element: <CartPage />,
+          element: <Category />,
         },
         {
           path: `/product-view/:item`,

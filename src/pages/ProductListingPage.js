@@ -9,15 +9,15 @@ export default function ProductListingPage() {
   const navigation = useNavigate();
 
   var settings = {
-    dots: true,
-    infinite: false,
+    // dots: true,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 3072,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 5,
@@ -26,15 +26,15 @@ export default function ProductListingPage() {
         },
       },
       {
-        breakpoint: 800,
+        breakpoint: 3024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          initialSlide: 3,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 580,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -43,6 +43,13 @@ export default function ProductListingPage() {
     ],
   };
 
+  // var settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  // };
   const handleClick = (category) => {
     navigation(`/product-list-page/${category}`);
   };
@@ -53,55 +60,62 @@ export default function ProductListingPage() {
   const mapArry = [1, 2, 3, 4, 5, 6, 7];
   return (
     <React.Fragment>
-      {/* TODO: Remove this Header */}
-      <Header />
-      <div className="title-link">
-        <h1>
-          Furniture <span className="cart">Section</span>
-        </h1>
-        {/* TODO: make this a reusable component */}
-        <div>
+      <div className="main-product-listing">
+        <div className="title-link">
+          <h1>
+            Furniture <span className="cart">Section</span>
+          </h1>
+          {/* TODO: make this a reusable component */}
+          <div>
+            <span
+              className="link-see-more"
+              onClick={() => handleClick("furniture")}
+            >
+              See more...
+            </span>
+          </div>
+        </div>
+
+        <div className="slider-container">
+          <Slider {...settings}>
+            {mapArry.map((_x) => {
+              return (
+                <div
+                  key={_x + 1}
+                  onClick={() => handleItemClick("item")}
+                  className="single-item"
+                >
+                  <CardComponent />
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+
+        <div className="title-link">
+          <h1>
+            Clothes<span className="cart"> & Boots</span>
+          </h1>
           <span
             className="link-see-more"
-            onClick={() => handleClick("furniture")}
+            onClick={() => handleClick("clothes")}
           >
             See more...
           </span>
         </div>
-      </div>
-
-      <div className="slider-container">
-        <Slider {...settings}>
-          {mapArry.map((_x) => {
-            return (
-              <div key={_x + 1} onClick={() => handleItemClick("item")} className="single-item">
-                <CardComponent  />
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-
-      <div className="title-link">
-        <h1>
-          Clothes<span className="cart"> & Boots</span>
-        </h1>
-        <span className="link-see-more" onClick={() => handleClick("clothes")}>
-          See more...
-        </span>
-      </div>
-      <div className="slider-container">
-        <Slider {...settings}>
-          {mapArry.map((_x) => {
-            return (
-              <>
-                <div key={_x + 1} onClick={() => handleItemClick("item")}>
-                  <CardComponent />
-                </div>
-              </>
-            );
-          })}
-        </Slider>
+        <div className="slider-container">
+          <Slider {...settings}>
+            {mapArry.map((_x) => {
+              return (
+                <>
+                  <div key={_x + 1} onClick={() => handleItemClick("item")}>
+                    <CardComponent />
+                  </div>
+                </>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
     </React.Fragment>
   );
