@@ -1,18 +1,19 @@
-import React from "react";
+import React, { createContext } from "react";
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import ProductListingPage from "./pages/ProductListingPage";
 import CartPage from "./pages/CartPage";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-
 import { ChakraProvider } from "@chakra-ui/react";
 import SidebarComponent from "./components/sideBar/SidebarComponents.js";
 import Header from "./components/header/Header.js";
 
+// Create a new context
+const MyContext = createContext();
 const Layout = () => {
   return (
     <React.Fragment>
-    <Header/>
+      <Header />
       <div className="container">
         <div className="row">
           <div className="col-4">
@@ -49,9 +50,12 @@ function App() {
     },
   ]);
   return (
-    <ChakraProvider>
-      <RouterProvider router={router} />
-    </ChakraProvider>
+    // TODO: Follow up on the context api
+    <MyContext.Provider>
+      <ChakraProvider>
+        <RouterProvider router={router} />
+      </ChakraProvider>
+    </MyContext.Provider>
   );
 }
 

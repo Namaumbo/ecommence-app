@@ -11,6 +11,8 @@ import {
   Button,
   CardFooter,
 } from "@chakra-ui/react";
+import "./Card.css";
+import Header from "../header/Header";
 
 export default function CardComponent() {
   return (
@@ -22,23 +24,19 @@ export default function CardComponent() {
             alt="Green double couch with wooden legs"
             borderRadius="lg"
           />
-          <Stack mt="6" spacing="3">
-            <Heading size="md">Living room Sofa</Heading>
-            <Text color="blue.600" fontSize="2xl">
-              $450
-            </Text>
-          </Stack>
         </CardBody>
-        <Divider />
-        <CardFooter>
-          <ButtonGroup spacing="2">
-            <Button variant="solid" colorScheme="blue">
-              Buy now
-            </Button>
-            <Button variant="ghost" colorScheme="blue">
-              Add to cart
-            </Button>
-          </ButtonGroup>
+        <div className="info-card">
+          <Text className="name">Green double couch</Text>
+          <h3 className="price-number">$150</h3>
+        </div>
+        <CardFooter className="futa">
+          <Button colorScheme="teal" size="sm" className="add-btn">
+            To Cart
+          </Button>
+
+          <Button colorScheme="blue" size="sm">
+            Buy Now
+          </Button>
         </CardFooter>
       </Card>
     </React.Fragment>
