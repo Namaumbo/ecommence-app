@@ -12,15 +12,12 @@ export default function ProductListingPage() {
 
   const CustomNextArrow = (props) => (
     <div
-      style={
-        {
-          position:"relative",
-          left: "20px",
-          width: "40px",
-          marginBottom:"10px"
-      
-        }
-      }
+      style={{
+        position: "relative",
+        left: "20px",
+        width: "40px",
+        marginBottom: "10px",
+      }}
       onClick={props.onClick}
     >
       <Button colorScheme="blue" size="sm">
@@ -102,31 +99,6 @@ export default function ProductListingPage() {
                 >
                   <CardComponent />
                 </div>
-              );
-            })}
-          </Slider>
-        </div>
-
-        <div className="title-link">
-          <h1>
-            Clothes<span className="cart"> & Boots</span>
-          </h1>
-          <span
-            className="link-see-more"
-            onClick={() => handleClick("clothes")}
-          >
-            See more...
-          </span>
-        </div>
-        <div className="slider-container">
-          <Slider {...settings}>
-            {mapArry.map((_x) => {
-              return (
-                <>
-                  <div key={_x + 1} onClick={() => handleItemClick("item")}>
-                    <CardComponent />
-                  </div>
-                </>
               );
             })}
           </Slider>

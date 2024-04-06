@@ -86,10 +86,11 @@
 }
 
 .link-see-more {
-    font-weight: lighter;
+    font-weight: bolder;
     font-size: 16px;
     color: #dbb358;
     cursor: pointer;
+
 }
 
 .title-link {
@@ -101,7 +102,7 @@
 
 .main-product-listing {
     /* border: 1px solid red/; */
-    width: 180.5%;
+    width: 170%;
 }
 
 .single-item {}
@@ -113,6 +114,7 @@
 
 /* Increase the width of the slider */
 .slick-list {
-    width: 165%;
+    margin:auto;
+    width: 178%;
     /* Set your desired width */
 }

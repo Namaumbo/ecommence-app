@@ -19,7 +19,7 @@ const Layout = () => {
         <div>
           <SidebarComponent />
         </div>
-        <div>
+        <div className="out-let">
           <Outlet />
         </div>
       </div>
