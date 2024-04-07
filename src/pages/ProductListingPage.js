@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+// import axios from "axios";
 import CardComponent from "../components/cardComponent/CardComponent";
 import Slider from "react-slick";
 import "./pages.css";
 import * as github from "react-icons/go";
 import { Button } from "@chakra-ui/react";
-import dummy from "../dummy,.json"
+import dummy from "../dummy,.json";
 
-export default function ProductListingPage({product}) {
+
+export default function ProductListingPage({ product }) {
   const navigation = useNavigate();
 
   // TODO: fetch from db using useEffect
@@ -67,7 +69,19 @@ export default function ProductListingPage({product}) {
     navigation(`/product-list-page/${category}`);
   };
 
- 
+  // const fetchPhotos = async () => {
+  //   await axios.get("https://jsonplaceholder.typicode.com/photos");
+  // };
+
+  useEffect(() => {
+    // Product().then((productsData) => {
+    //   setProducts(productsData);
+    //   setTimeout(() => console.log(products),3000);
+    // }).catch((error) => {
+    //   console.error("Error fetching products:", error);
+    // });
+  }, []);
+
   return (
     <React.Fragment>
       <div className="main-product-listing">
@@ -90,10 +104,7 @@ export default function ProductListingPage({product}) {
           <Slider {...settings}>
             {dummy.map((_x) => {
               return (
-                <div
-                  key={_x + 1}
-                  className="single-item"
-                >
+                <div key={_x + 1} className="single-item">
                   <CardComponent product={_x} key={_x.name} />
                 </div>
               );
