@@ -1,4 +1,3 @@
-import CartContext from "./CartContext";
 // CartContext.js
 import React, { createContext, useState } from "react";
 
