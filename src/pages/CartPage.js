@@ -11,7 +11,7 @@ export default function CartPage() {
       <Heading as="h4" size="lg" id="head">
         My <span className="cart">Cart</span>
       </Heading>
-      {cart.length != 0 ? (
+      {cart.length !== 0 ? (
         <>
           <div className="order-cart-container">
             <div className="picked-item-container">
