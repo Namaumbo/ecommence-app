@@ -4,7 +4,7 @@ import "./carousel.css";
 
 function CarouselComponent() {
   const settings = {
-    dots: true,
+  
     fade: true,
     infinite: true,
     speed: 1000,
