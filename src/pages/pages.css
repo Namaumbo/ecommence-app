@@ -9,7 +9,6 @@
 
 .picked-item-container {
     height: 25em;
-    /* border: 0.3px solid rgb(185, 185, 185); */
     border-radius: 5px;
     padding: 10px;
     overflow: hidden;
@@ -37,7 +36,6 @@
 }
 
 .order-total {
-    /* border: 0.3px solid rgb(185, 185, 185); */
     border-radius: 5px;
 }
 
@@ -45,49 +43,75 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-.checkout-btn {
-    background-color: #dbb358;
-    padding: 1px;
-    width: 310px;
-    /* border: 1px solid #dbb358; */
-    border-radius: 4px;
-    color: white;
-    font-weight: lighter;
-    margin-top: 10px;
-}
 
 
-/* For WebKit-based browsers (Chrome, Safari, Opera) */
+
 ::-webkit-scrollbar {
     width: 12px;
-    /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
     background-color: #f1f1f1;
-    /* Color of the track (area behind the scrollbar) */
+
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #888;
-    /* Color of the scrollbar thumb (the draggable part) */
+ 
     border-radius: 6px;
-    /* Rounded corners of the scrollbar thumb */
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
-    /* Color of the scrollbar thumb on hover */
 }
 
-/* For Firefox */
+
 * {
     scrollbar-width: thin;
-    /* Width of the scrollbar */
     scrollbar-color: #dbb358 #f1f1f1;
-    /* Color of the scrollbar thumb and track */
+
 
 }
+
+
+
+.slider-container {}
+
+.link-see-more {
+    font-weight: bolder;
+    font-size: 16px;
+    color: #dbb358;
+    cursor: pointer;
+
+}
+
+.title-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.main-product-listing {
+
+    width: 170%;
+}
+
+.single-item {}
+
+.single-item:hover {}
+
+.slick-list {
+    margin: auto;
+    width: 178%;
+
+}
+
+
+
+/* LANDING PAGE STYLES */
+
 #landing-page {
     padding: 15px;
 }
@@ -112,42 +136,12 @@
     /* margin-top: 3em; */
 }
 
-
-
-.slider-container {
-    /* border: 1px solid black; */
-}
-
-.link-see-more {
-    font-weight: bolder;
-    font-size: 16px;
-    color: #dbb358;
-    cursor: pointer;
-
-}
-
-.title-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.main-product-listing {
-    /* border: 1px solid red/; */
-    width: 170%;
-}
-
-.single-item {}
-
-.single-item:hover {
-    /* box-shadow: 5px 5px 5px ; */
-
-}
-
-/* Increase the width of the slider */
-.slick-list {
-    margin:auto;
-    width: 178%;
-    /* Set your desired width */
+.checkout-btn {
+    background-color: #dbb358;
+    padding: 1px;
+    width: 310px;
+    border-radius: 4px;
+    color: white;
+    font-weight: lighter;
+    margin-top: 10px;
 }

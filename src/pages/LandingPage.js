@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import CarouselComponent from "../components/carousel/CarouselComponent";
 import "./pages.css";
 import { Text } from "@chakra-ui/react";
+import Header from "../components/header/Header";
 
 export default function LandingPage() {
   const navigation = useNavigate()
@@ -11,8 +12,9 @@ export default function LandingPage() {
   }
     return (
     <React.Fragment>
+    <Header/>
       <div className="container" id="main-container">
-        <div className="row align-items-start">
+        <div className="row">
           <div className="col" id="info-words">
             <span id="welcome-words">
               <span className="A">50%</span> off Summer Sale
