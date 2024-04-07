@@ -73,7 +73,7 @@ export default function ProductListingPage({product}) {
       <div className="main-product-listing">
         <div className="title-link">
           <h1>
-            Furniture <span className="cart">Section</span>
+            Furnire <span className="cart">Section</span>
           </h1>
           {/* TODO: make this a reusable component */}
           <div>
