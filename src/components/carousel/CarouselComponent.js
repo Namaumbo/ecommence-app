@@ -18,25 +18,24 @@ function CarouselComponent() {
     autoplaySpeed: 4000,
   };
 
-  const pictures = ["photo.avif","clothes.JPG","photo.avif","clothes.JPG"]
+  const pictures = ["photo.avif", "clothes.JPG", "photo.avif", "clothes.JPG"];
   return (
     <div className="slider-container">
       <Slider {...settings}>
-      {
-        pictures.map(picture =>{
-          return(
-            <>
+        {pictures.map((picture) => {
+          return (
             <div className="carousel-img">
-          <img src={`${process.env.PUBLIC_URL}/${picture}`} alt="sample pic" />
-        </div>
-            </>
-          )
-        })
-      }
+              <img
+                src={`${process.env.PUBLIC_URL}${picture}`}
+                alt="sample pic"
+              />
+            </div>
+          );
+        })}
+      
       </Slider>
     </div>
   );
 }
-
 
 export default CarouselComponent;

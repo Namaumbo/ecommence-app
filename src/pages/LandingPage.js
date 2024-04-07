@@ -13,29 +13,7 @@ export default function LandingPage() {
   return (
     <React.Fragment>
       <Header />
-      {/* <div className="container" id="main-container">
-        <div className="row">
-          <div className="col" id="info-words">
-            <span id="welcome-words">
-              <span className="A">50%</span> off Summer Sale
-            </span>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Text>
-            <button
-              className="checkout-btn"
-              id="landing-page"
-              onClick={onButtonClick}
-            >
-              SHOP NOW
-            </button>
-          </div>
-          <div className="col">
-            <CarouselComponent />
-          </div>
-        </div>
-      </div> */}
+     
       <div id="main-container">
         <div className="row">
           <div className="col">

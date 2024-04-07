@@ -74,6 +74,8 @@ export default function ProductListingPage({ product }) {
   // };
 
   useEffect(() => {
+    // this would be fetching items having a category_id , Name , Price and some description
+
     // Product().then((productsData) => {
     //   setProducts(productsData);
     //   setTimeout(() => console.log(products),3000);
@@ -87,12 +89,14 @@ export default function ProductListingPage({ product }) {
       <div className="main-product-listing">
         <div className="title-link">
           <h1>
-            Furni3re <span className="cart">Section</span>
+            Furniture <span className="cart">Section</span>
           </h1>
           {/* TODO: make this a reusable component */}
           <div>
             <span
               className="link-see-more"
+              // this on click would map the data from api and get the category id 
+              // to call at the category component as for now is hard coded
               onClick={() => handleClick("furniture")}
             >
               See more...

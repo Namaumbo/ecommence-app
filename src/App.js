@@ -47,7 +47,7 @@ function App() {
         },
         {
           path: "/product-list-page/:category",
-          element: <Category />,
+          element: <Category/>,
         },
         {
           path: "/product-view/:item",
