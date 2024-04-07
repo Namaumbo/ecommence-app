@@ -6,11 +6,7 @@ import { NavLink } from "react-router-dom";
 
 export default function SidebarComponent() {
   const links = [
-    // {
-    //   name: "LandingPage",
-    //   icon: <github.GoArchive />,
-    //   path: "/",
-    // },
+  
     {
       name: "ProductList",
       icon: <github.GoRows />,

@@ -30,7 +30,6 @@ const Layout = () => {
 
 function App() {
   const router = createBrowserRouter([
-    
     {
       path: "/",
       element: <LandingPage />,
@@ -48,7 +47,7 @@ function App() {
         },
         {
           path: "/product-list-page/:category",
-          element: <Category />,
+          element: <Category/>,
         },
         {
           path: "/product-view/:item",
@@ -60,7 +59,6 @@ function App() {
   return (
     <CartProvider>
       <ChakraProvider>
-      
         <RouterProvider router={router} />
       </ChakraProvider>
     </CartProvider>

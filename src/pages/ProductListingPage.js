@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+// import axios from "axios";
 import CardComponent from "../components/cardComponent/CardComponent";
 import Slider from "react-slick";
 import "./pages.css";
 import * as github from "react-icons/go";
 import { Button } from "@chakra-ui/react";
-import dummy from "../dummy,.json"
+import dummy from "../dummy,.json";
 
-export default function ProductListingPage({product}) {
+
+export default function ProductListingPage({ product }) {
   const navigation = useNavigate();
 
   // TODO: fetch from db using useEffect
@@ -67,18 +69,34 @@ export default function ProductListingPage({product}) {
     navigation(`/product-list-page/${category}`);
   };
 
- 
+  // const fetchPhotos = async () => {
+  //   await axios.get("https://jsonplaceholder.typicode.com/photos");
+  // };
+
+  useEffect(() => {
+    // this would be fetching items having a category_id , Name , Price and some description
+
+    // Product().then((productsData) => {
+    //   setProducts(productsData);
+    //   setTimeout(() => console.log(products),3000);
+    // }).catch((error) => {
+    //   console.error("Error fetching products:", error);
+    // });
+  }, []);
+
   return (
     <React.Fragment>
       <div className="main-product-listing">
         <div className="title-link">
           <h1>
-            Furni3re <span className="cart">Section</span>
+            Furniture <span className="cart">Section</span>
           </h1>
           {/* TODO: make this a reusable component */}
           <div>
             <span
               className="link-see-more"
+              // this on click would map the data from api and get the category id 
+              // to call at the category component as for now is hard coded
               onClick={() => handleClick("furniture")}
             >
               See more...
@@ -90,10 +108,7 @@ export default function ProductListingPage({product}) {
           <Slider {...settings}>
             {dummy.map((_x) => {
               return (
-                <div
-                  key={_x + 1}
-                  className="single-item"
-                >
+                <div key={_x + 1} className="single-item">
                   <CardComponent product={_x} key={_x.name} />
                 </div>
               );
