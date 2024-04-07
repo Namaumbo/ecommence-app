@@ -30,13 +30,14 @@ const Layout = () => {
 
 function App() {
   const router = createBrowserRouter([
+    
+    {
+      path: "/",
+      element: <LandingPage />,
+    },
     {
       element: <Layout />,
       children: [
-        {
-          path: "/",
-          element: <LandingPage />,
-        },
         {
           path: "/product-list-page",
           element: <ProductListingPage />,
@@ -46,11 +47,11 @@ function App() {
           element: <CartPage />,
         },
         {
-          path: `/product-list-page/:category`,
+          path: "/product-list-page/:category",
           element: <Category />,
         },
         {
-          path: `/product-view/:item`,
+          path: "/product-view/:item",
           element: <ItemPage />,
         },
       ],
@@ -59,6 +60,7 @@ function App() {
   return (
     <CartProvider>
       <ChakraProvider>
+      
         <RouterProvider router={router} />
       </ChakraProvider>
     </CartProvider>
